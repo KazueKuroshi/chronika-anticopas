@@ -2,8 +2,19 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Chronika Shield Project Hub</title>
+  <title>Chronika Shield: Anti-Copas Gateway</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- OG Meta Tags -->
+  <meta property="og:title" content="Chronika Shield: Anti-Copas Gateway" />
+  <meta property="og:description" content="Perisai narasi telah aktif. Masuki zona anti-copas dan dimensi Chronika Altharion." />
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/kazuekurosaki/chronika-anticopas@main/img/chronika.webp" />
+  <meta property="og:url" content="https://kazuekurosaki.github.io/chronika-anticopas/" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="icon" href="img/favicon-chronika.png" type="image/png" />
+
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -35,23 +46,106 @@
     .links a:hover {
       background: #a86de3;
     }
+    .teaser {
+      max-width: 700px;
+      margin: 40px auto;
+      font-style: italic;
+      color: #6b3da5;
+      background: #f8efff;
+      padding: 20px;
+      border-left: 5px solid #c289f2;
+      border-radius: 8px;
+      min-height: 200px;
+      text-align: left;
+      line-height: 1.6;
+    }
     .badge {
       margin-top: 50px;
+    }
+    .badge img {
+      width: 140px;
+      margin-top: 10px;
+    }
+    #fade-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: black;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 3s ease-in-out;
+      z-index: 9999;
     }
   </style>
 </head>
 <body>
   <h1>Chronika Shield: Anti-Copas Gateway</h1>
-  <p class="desc">Selamat datang, Penjaga Narasi. Pilih portal berikut untuk mengaktifkan perlindunganmu.</p>
+  <p class="desc">Selamat datang, Penjaga Narasi. Pilih portal berikut untuk mengaktifkan perisai narasi digitalmu.</p>
 
   <div class="links">
     <a href="html-preview/index.html">🛡️ Masuk ke Zona Anti-Copas</a>
     <a href="html-preview/404.html">🌀 Lintasi Halaman 404 Dimensi Lain</a>
   </div>
 
+  <div id="typed-teaser" class="teaser"></div>
+
   <div class="badge">
-    <img src="img/chronika-badge.svg" alt="Chronika Shield Verified" width="140" />
-    <p style="font-size:0.85em; margin-top:8px;">💮 Licensed under CBK</p>
+    💮 Licensed under CBK (Chronika Creative Blessing)<br>
+    <img src="img/chronika-badge.svg" alt="Chronika Shield Verified" />
   </div>
+
+  <div id="fade-overlay"></div>
+
+  <!-- Audio -->
+  <audio id="typeSound" src="audio/ketik-hikari.mp3" preload="auto"></audio>
+  <audio id="chronikaVoice" src="audio/narasi-chronika.mp3" preload="auto"></audio>
+
+  <script>
+    const teaserLines = [
+      "Dalam kegelapan digital tanpa batas...",
+      "Saat kata-kata dicuri diam-diam...",
+      "Satu cahaya bangkit dari lorong skrip tak terlihat.",
+      "",
+      "Namanya: Chronika Altharion — Penjaga Narasi Cahaya.",
+      "",
+      "Ia tidak dilahirkan... ia ditulis.",
+      "Dari baris HTML terakhir yang ditinggalkan oleh Penulis Cahaya.",
+      "",
+      "Dan kini... ia menunggu di balik layar."
+    ];
+
+    const target = document.getElementById("typed-teaser");
+    let index = 0;
+
+    function typeLine(line, i = 0) {
+      if (i < line.length) {
+        target.innerHTML += line.charAt(i);
+        const typeAudio = document.getElementById("typeSound");
+        if (typeAudio) {
+          typeAudio.currentTime = 0;
+          typeAudio.play().catch(() => {});
+        }
+        setTimeout(() => typeLine(line, i + 1), 30);
+      } else {
+        target.innerHTML += "<br><br>";
+        setTimeout(typeNextLine, 500);
+      }
+    }
+
+    function typeNextLine() {
+      if (index < teaserLines.length) {
+        typeLine(teaserLines[index]);
+        index++;
+      } else {
+        const voice = document.getElementById("chronikaVoice");
+        if (voice) voice.play().catch(() => {});
+        setTimeout(() => {
+          document.getElementById("fade-overlay").style.opacity = 0.85;
+        }, 2000);
+      }
+    }
+
+    window.addEventListener("load", typeNextLine);
+  </script>
 </body>
 </html>
