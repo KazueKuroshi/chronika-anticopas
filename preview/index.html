@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Zona Anti-Copas - Hikari Bunko</title>
+  <style>
+    body {
+      background: radial-gradient(circle at center, #fff4fd, #f9e9ff);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #40244e;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.93);
+      border-radius: 20px;
+      border: 2px solid #d5a4f7;
+      box-shadow: 0 0 30px #ebb4ff;
+      position: relative;
+      overflow: hidden;
+    }
+    .aura-outer {
+      position: absolute;
+      top: -50px; bottom: -50px;
+      left: -50px; right: -50px;
+      background: conic-gradient(from 0deg, #f5baff, #ddb4ff, #f5baff);
+      z-index: -1;
+      animation: spinAura 10s linear infinite;
+      filter: blur(70px);
+      opacity: 0.3;
+      border-radius: 25px;
+    }
+    @keyframes spinAura {
+      to { transform: rotate(360deg); }
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2em;
+      color: #8b41d5;
+      text-shadow: 0 0 5px #e7c6ff;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+      color: #914ed3;
+    }
+    .guardian-img {
+      display: block;
+      margin: 0 auto 30px;
+      border: 3px dashed #bb76f5;
+      border-radius: 15px;
+      max-width: 300px;
+      box-shadow: 0 0 25px #e0a3ff;
+    }
+    h2 {
+      color: #7e38aa;
+      border-left: 4px solid #c075f3;
+      padding-left: 12px;
+      margin-top: 30px;
+    }
+    ul {
+      list-style: "💫 ";
+      padding-left: 25px;
+      margin-bottom: 25px;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #9058b0;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="aura-outer"></div>
+    <h1>⚔️ Zona Anti-Copas Lv.99 ⚔️</h1>
+    <p class="quote">“Hmph… kau telah membangkitkan mantra terlarang…” — <strong>Chronika Altharion</strong></p>
+    
+    <img src="URL-GAMBAR-WEBP-DISINI" alt="Chronika Altharion" class="guardian-img">
+    
+    <h2>Tentang Halaman Ini</h2>
+    <p>Halaman ini dilindungi oleh sihir tertinggi Hikari Bunko. Setiap elemen adalah bagian dari kontrak otaku yang tidak bisa dibatalkan oleh sembarang copasser.</p>
+
+    <h2>Jika Kamu Mencoba Menyalin</h2>
+    <ul>
+      <li>⚠️ Browser akan freeze dengan background filler loop</li>
+      <li>⚠️ Notepad-mu mulai mengetik “Aku hanyalah NPC…” sendiri</li>
+      <li>⚠️ Musik pertempuran akhir diputar tanpa henti</li>
+    </ul>
+
+    <h2>Yang Harus Kamu Lakukan</h2>
+    <ul>
+      <li>💫 Bagikan link resminya</li>
+      <li>💫 Gabung ke komunitas Hikari Bunko</li>
+      <li>💫 Hormati para Penjaga Narasi seperti Chronika</li>
+    </ul>
+
+    <div class="footer">
+      🔮 Powered by <strong>Chronika Altharion</strong> — Guardian of Scripted Light<br>
+      Dirancang oleh Guild Hikari Bunko ✨
+    </div>
+    </div>
+
+  <!-- 🔊 Audio Kutukan & Klik + Sparkle Scroll -->
+  <audio id="clickSound" src="URL-SUARA-KLIK" preload="auto"></audio>
+  <audio id="curseVoice" src="URL-VOICEOVER-KUTUKAN" preload="auto"></audio>
+  <script>
+    // Putar kutukan saat halaman dibuka
+    window.addEventListener('load', function() {
+      const curse = document.getElementById('curseVoice');
+      if (curse) curse.play().catch(() => {});
+    });
+
+    // Efek suara klik
+    document.addEventListener('click', function() {
+      const clickAudio = document.getElementById('clickSound');
+      if (clickAudio) {
+        clickAudio.currentTime = 0;
+        clickAudio.play();
+      }
+    });
+
+    // Efek gemerlap saat scroll
+    document.addEventListener("scroll", () => {
+      const sparkle = document.createElement("div");
+      sparkle.textContent = "✨";
+      sparkle.style.position = "fixed";
+      sparkle.style.left = Math.random() * window.innerWidth + "px";
+      sparkle.style.top = Math.random() * window.innerHeight + "px";
+      sparkle.style.fontSize = "20px";
+      sparkle.style.opacity = 0.7;
+      sparkle.style.zIndex = 9999;
+      sparkle.style.pointerEvents = "none";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    });
+  </script>
+</body>
+</html>
