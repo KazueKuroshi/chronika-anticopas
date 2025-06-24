@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Zona Anti-Copas - Hikari Bunko</title>
+  <link rel="icon" href="../img/favicon-chronika.png" type="image/png">
   <style>
     body {
       background: radial-gradient(circle at center, #fff4fd, #f9e9ff);
@@ -24,8 +25,7 @@
     }
     .aura-outer {
       position: absolute;
-      top: -50px; bottom: -50px;
-      left: -50px; right: -50px;
+      top: -50px; bottom: -50px; left: -50px; right: -50px;
       background: conic-gradient(from 0deg, #f5baff, #ddb4ff, #f5baff);
       z-index: -1;
       animation: spinAura 10s linear infinite;
@@ -45,8 +45,7 @@
     .quote {
       font-style: italic;
       text-align: center;
-      margin-top: 10px;
-      margin-bottom: 30px;
+      margin: 10px 0 30px;
       font-size: 1.1em;
       color: #914ed3;
     }
@@ -74,9 +73,13 @@
     }
     .footer {
       text-align: center;
-      font-size: 0.9em;
-      color: #9058b0;
-      margin-top: 40px;
+      font-size: 0.85em;
+      color: #8050a0;
+      margin-top: 50px;
+    }
+    .footer img {
+      margin-top: 8px;
+      width: 130px;
     }
   </style>
 </head>
@@ -85,52 +88,49 @@
     <div class="aura-outer"></div>
     <h1>⚔️ Zona Anti-Copas Lv.99 ⚔️</h1>
     <p class="quote">“Hmph… kau telah membangkitkan mantra terlarang…” — <strong>Chronika Altharion</strong></p>
-    
-    <img src="URL-GAMBAR-WEBP-DISINI" alt="Chronika Altharion" class="guardian-img">
-    
+
+    <img src="../img/chronika.webp" alt="Chronika Altharion" class="guardian-img" />
+
     <h2>Tentang Halaman Ini</h2>
-    <p>Halaman ini dilindungi oleh sihir tertinggi Hikari Bunko. Setiap elemen adalah bagian dari kontrak otaku yang tidak bisa dibatalkan oleh sembarang copasser.</p>
+    <p>Halaman ini dilindungi oleh sihir tertinggi Hikari Bunko. Setiap elemennya merupakan perisai naratif terhadap copasser dimensi lain.</p>
 
     <h2>Jika Kamu Mencoba Menyalin</h2>
     <ul>
-      <li>⚠️ Browser akan freeze dengan background filler loop</li>
-      <li>⚠️ Notepad-mu mulai mengetik “Aku hanyalah NPC…” sendiri</li>
-      <li>⚠️ Musik pertempuran akhir diputar tanpa henti</li>
+      <li>⚠️ Browser akan freeze dalam filler loop</li>
+      <li>⚠️ Notepad-mu mengetik sendiri pesan misterius</li>
+      <li>⚠️ Musik boss battle terputar otomatis</li>
     </ul>
 
     <h2>Yang Harus Kamu Lakukan</h2>
     <ul>
-      <li>💫 Bagikan link resminya</li>
-      <li>💫 Gabung ke komunitas Hikari Bunko</li>
-      <li>💫 Hormati para Penjaga Narasi seperti Chronika</li>
+      <li>💫 Bagikan link resmi</li>
+      <li>💫 Bergabunglah ke Guild Hikari Bunko</li>
+      <li>💫 Hormati Penjaga Narasi seperti Chronika</li>
     </ul>
 
     <div class="footer">
-      🔮 Powered by <strong>Chronika Altharion</strong> — Guardian of Scripted Light<br>
-      Dirancang oleh Guild Hikari Bunko ✨
+      🔮 Powered by Chronika Altharion — Guardian of Scripted Light<br>
+      💮 Licensed under CBK (Chronika Creative Blessing)<br>
+      <img src="../img/chronika-badge.svg" alt="Chronika Shield Verified" />
     </div>
-    </div>
+  </div>
 
-  <!-- 🔊 Audio Kutukan & Klik + Sparkle Scroll -->
-  <audio id="clickSound" src="URL-SUARA-KLIK" preload="auto"></audio>
-  <audio id="curseVoice" src="URL-VOICEOVER-KUTUKAN" preload="auto"></audio>
+  <audio id="clickSound" src="../audio/klik-hikari.mp3" preload="auto"></audio>
+  <audio id="curseVoice" src="../audio/kutukan-chronika.mp3" preload="auto"></audio>
   <script>
-    // Putar kutukan saat halaman dibuka
-    window.addEventListener('load', function() {
+    window.addEventListener('load', () => {
       const curse = document.getElementById('curseVoice');
       if (curse) curse.play().catch(() => {});
     });
 
-    // Efek suara klik
-    document.addEventListener('click', function() {
-      const clickAudio = document.getElementById('clickSound');
-      if (clickAudio) {
-        clickAudio.currentTime = 0;
-        clickAudio.play();
+    document.addEventListener('click', () => {
+      const click = document.getElementById('clickSound');
+      if (click) {
+        click.currentTime = 0;
+        click.play();
       }
     });
 
-    // Efek gemerlap saat scroll
     document.addEventListener("scroll", () => {
       const sparkle = document.createElement("div");
       sparkle.textContent = "✨";
