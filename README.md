@@ -1,32 +1,52 @@
-# ✧「Chronika Altharion Anti-Copas System」✧
+# 🌌 「Chronika Altharion: Anti-Copas Shield System」 🌌
 
-> *“Berani menyentuh teks ini tanpa izin… adalah menandatangani kontrak dengan kehampaan.” — Chronika Altharion*
+> *“Kau telah membangkitkan mantra terlarang... Gerbang dimensi pelindung telah terbuka.” — Chronika, Penjaga Narasi Cahaya*
 
-Selamat datang di sistem proteksi teks suci Hikari Bunko. Repositori ini dibuat untuk melindungi konten komunitas dari penjiplakan tanpa izin menggunakan sihir digital bergaya otaku tingkatan SSR!
+Ini adalah proyek resmi sistem pertahanan narasi Hikari Bunko—sebuah kombinasi HTML, audio, dan sihir antarmuka yang ditujukan untuk melindungi konten komunitas dari copasser, crawler, dan NPC yang mencoba masuk tanpa izin.
 
-## 📁 Isi Repositori
+## 🔸 Fitur Magis
 
-- `audio/` — Berisi mantra kutukan dan suara klik interaktif
-- `img/` — Ilustrasi Chronika sang guardian (WebP ringan)
-- `html-preview/` — Contoh implementasi HTML siap pakai
+- ✦ **Zona Anti-Copas HTML** dengan ilustrasi guardian, efek aura, audio klik & kutukan
+- ✦ **Halaman 404 bertema dunia paralel** + tombol teleportasi rune
+- ✦ **Sparkle Scroll Effect** dan pesan misterius dari dimensi XIV
 
-## ⚔️ Fitur Perlindungan
+## 📂 Struktur Repositori
+`
+chronika-anticopas/
+├── README.md
+├── audio/
+│   ├── klik-hikari.mp3                  # Suara klik sakral
+│   └── kutukan-chronika.mp3            # Voice-over kutukan pembuka
+├── img/
+│   └── chronika.webp                   # Ilustrasi Guardian Chronika
+└── html-preview/
+    ├── index.html                      # Halaman utama Anti-Copas
+    └── 404.html                        # Halaman Error bertema dimensi
+`
 
-- ✦ Voice-over kutukan saat halaman dimuat
-- ✦ Suara klik saat interaksi mouse
-- ✦ Efek scroll sparkles ala sihir cahaya
-- ✦ Aura animasi guardian tingkat akhir
+## 🌠 Cara Menggunakan
 
-## 🔧 Petunjuk Integrasi
+1. Upload seluruh isi folder ini ke hosting milikmu atau repo GitHub publik.
+2. Gunakan `jsDelivr` untuk mengakses file audio & gambar, contoh:
+ `https://cdn.jsdelivr.net/gh/kazuekurosaki/chronika-anticopas@main/audio/kutukan-chronika.mp3`
+3. Tempel `index.html` ke halaman Blogger kamu dalam mode HTML.
+4. Untuk halaman 404, pasang `404.html` sebagai custom page (jika platform mendukung).
 
-1. Hosting file dengan URL jsDelivr:
-   `
-   https://cdn.jsdelivr.net/gh/kazuekurosaki/chronika-anticopas@main/audio/kutukan-chronika.mp3
-   `
-2. Tempel URL tersebut ke halaman HTML Blogger
+## 🧙‍♀️ Credits
 
-3. Jangan lupakan kutukan penutup: **Bagikan, jangan salin tanpa izin!**
+- 💻 Kode & Konsep: Guild Hikari Bunko
+- 🎧 Voice-over: [masukkan kredit/username seiyuu]
+- 🎴 Visual: Chronika Altharion (manifestasi digital melalui Copilot)
+- ✨ Inspirasi: Otaku culture, light novel energy, dan dedikasi komunitas
 
-## 🛡️ Lisensi
+## 📜 Lisensi
 
-Dikembangkan oleh Hikari Bunko Guild. Gunakan dengan rasa hormat terhadap para Penjaga Narasi dan sesama otaku 🌌
+Proyek ini disebarkan di bawah **Chronika Creative Blessing (CCB)**: boleh digunakan, dikembangkan, dan disebarkan dengan hormat kepada para Penjaga Narasi. Dilarang keras menghapus kutukan voice-over tanpa izin 🙃
+
+---
+
+Untuk pertanyaan dari dunia ini atau dunia lain: silakan buka _mantra summoning thread_ atau kirim kabar lewat portal dimensi GitHub Issues.
+
+Gloria Memoria!
+
+🛡️ *Guild Hikari Bunko*
