@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>404 • Gerbang Dimensi Tak Terindeks</title>
+  <link rel="icon" href="../img/favicon-chronika.png" type="image/png" />
   <style>
     body {
       margin: 0;
@@ -54,11 +55,6 @@
       transform: scale(1.05);
       background: linear-gradient(90deg, #c185ff, #e3baff);
     }
-    .footer {
-      margin-top: 50px;
-      font-size: 0.85em;
-      color: #a480c0;
-    }
     .mystery-text {
       opacity: 0;
       font-size: 1.1em;
@@ -69,6 +65,15 @@
     }
     @keyframes revealText {
       to { opacity: 1; }
+    }
+    .footer {
+      margin-top: 60px;
+      font-size: 0.85em;
+      color: #a480c0;
+    }
+    .footer img {
+      margin-top: 10px;
+      width: 130px;
     }
   </style>
 </head>
@@ -86,12 +91,13 @@
     <div class="mystery-text">“...Chronika tahu kau ada di sini...”</div>
 
     <div class="footer">
-      Dipantau oleh Chronika Altharion, versi dimensi cabang IX
+      Dipantau oleh Chronika Altharion, versi dimensi cabang IX<br>
+      💮 Licensed under CBK (Chronika Creative Blessing)<br>
+      <img src="../img/chronika-badge.svg" alt="Chronika Shield Verified" />
     </div>
   </div>
 
-  <!-- Audio Kutukan & Efek Sparkle -->
-  <audio id="curseVoice" src="URL-VOICEOVER-KUTUKAN" preload="auto"></audio>
+  <audio id="curseVoice" src="../audio/kutukan-chronika.mp3" preload="auto"></audio>
   <script>
     window.addEventListener('load', function() {
       const curse = document.getElementById('curseVoice');
