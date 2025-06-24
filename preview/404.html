@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>404 • Gerbang Dimensi Tak Terindeks</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #f4ebff, #e5d4ff);
+      font-family: 'Segoe UI', sans-serif;
+      color: #4a2a78;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .container {
+      padding: 80px 30px;
+      position: relative;
+    }
+    h1 {
+      font-size: 3em;
+      color: #7d32c5;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 10px #dabaff;
+    }
+    .portal {
+      width: 220px;
+      height: 220px;
+      margin: 40px auto;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, #d5a4ff, #ffffff, #d5a4ff);
+      filter: blur(10px);
+      animation: spin 8s linear infinite;
+    }
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+    p {
+      font-size: 1.15em;
+    }
+    .rune-button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #b375f5, #d6a4ff);
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #e7c2ff;
+      transition: transform 0.2s;
+    }
+    .rune-button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(90deg, #c185ff, #e3baff);
+    }
+    .footer {
+      margin-top: 50px;
+      font-size: 0.85em;
+      color: #a480c0;
+    }
+    .mystery-text {
+      opacity: 0;
+      font-size: 1.1em;
+      margin-top: 40px;
+      color: #6a2b99;
+      animation: revealText 4s ease-in 4s forwards;
+      font-style: italic;
+    }
+    @keyframes revealText {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>⚠️ 404: Zona Dimensi Tak Terindeks</h1>
+    <div class="portal"></div>
+    <p>
+      Kau telah melintasi batas chapter...<br>
+      dan masuk ke ruang kosong antara dunia. Tidak ada halaman yang bisa ditemukan.
+    </p>
+
+    <a href="/" class="rune-button">🌀 Teleportasi Rune: Kembali ke Halaman Cahaya</a>
+
+    <div class="mystery-text">“...Chronika tahu kau ada di sini...”</div>
+
+    <div class="footer">
+      Dipantau oleh Chronika Altharion, versi dimensi cabang IX
+    </div>
+  </div>
+
+  <!-- Audio Kutukan & Efek Sparkle -->
+  <audio id="curseVoice" src="URL-VOICEOVER-KUTUKAN" preload="auto"></audio>
+  <script>
+    window.addEventListener('load', function() {
+      const curse = document.getElementById('curseVoice');
+      if (curse) curse.play().catch(() => {});
+    });
+
+    document.addEventListener("scroll", () => {
+      const sparkle = document.createElement("div");
+      sparkle.textContent = "✨";
+      sparkle.style.position = "fixed";
+      sparkle.style.left = Math.random() * window.innerWidth + "px";
+      sparkle.style.top = Math.random() * window.innerHeight + "px";
+      sparkle.style.fontSize = "20px";
+      sparkle.style.opacity = 0.7;
+      sparkle.style.zIndex = 9999;
+      sparkle.style.pointerEvents = "none";
+      document.body.appendChild(sparkle);
+      setTimeout(() => sparkle.remove(), 1000);
+    });
+  </script>
+</body>
+</html>
